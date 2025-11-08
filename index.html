@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Football Scoreboard</title>
+    <link rel="icon" href="Images/icons8-football-ball-64.png" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <script src="Button.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="Team-Display">TEAM A</div>
+         <div id="action-btn"onclick="start()"><button id="action-btn-child">start</button></div>
+        <div class="Team-Display Team-Display-flipped">TEAM B</div>
+    </div>
+
+    <section id="Display-Board">
+        <h1 class="Man-of-match">Man of Match</h1>
+        <div class="Screen"><div class="Screen-Display"> Ronaldo | MESSI</div></div>
+        
+        <section id="Control-Board">
+            <div id="timer-frame">
+                <h1 class="timer-title">Elasped Time</h1>
+                <div class="Screen" id="timer-display-frame"><div class="Screen-Display timer-display" id="Elasped-time">0</div></div>
+            </div>
+            <div id="Team-Scores">
+                <div class="score-display">
+                    <div><h1 class="team-name">TEAM A</h1></div>
+                    <div class="Screen Screen-Display Score-display-frame" id="Team-A-Score">0</div>
+                        <div>
+                        <button class="score-action-btn" onclick="increaseGoalA()" >Goal+</button>
+                        <button class="score-action-btn" onclick="decreaseGoalA()"  >Goal-</button>
+                        </div>
+                </div>
+                <div class="score-display">
+                    <div><h1 class="team-name" >TEAM B</h1></div>
+                    <div class="Screen Screen-Display Score-display-frame" id="Team-B-Score">0</div>
+                        <div>
+                        <button class="score-action-btn" onclick="increaseGoalB()">Goal+</button>
+                        <button class="score-action-btn" onclick="decreaseGoalB()">Goal-</button>
+                        </div>
+                </div>
+            </div>
+            <div id="Intervals-frame">
+                <h1 class="timer-title">Intervals</h1>
+                <div class="Screen" id="timer-display-frame"><div class="Screen-Display timer-display" id="match-status">Half time</div></div>
+                <button class="score-action-btn" onclick="displayFirstHalf()">First-Half</button>
+                <button class="score-action-btn" onclick="displaySecondHalf()"  >Second-half</button>
+                <button class="score-action-btn" onclick="displayHalfTime()" >half-time</button>
+            </div>
+        </section>
+    </section>
+<script src="logic.js"></script>
+</body>
+</html>

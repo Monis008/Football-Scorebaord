@@ -1,0 +1,410 @@
+@font-face {
+    font-family:Cursed-Timer;
+    src: url(Fonts/Cursed-timer/CursedTimerUlil-Aznm.ttf);
+}
+
+@font-face {
+    font-family:Jersey15;
+    src: url(Fonts/Jersey-15/Jersey15-Regular.ttf);
+}
+@font-face {
+    font-family:Verdana-font;
+    src: url(Fonts/Verdana/VERDANAI.TTF);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(Images/tyson-bennett-XYgTTbXCJ0M-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+
+}
+.Team-Display{
+    width: 40vw;
+    background-color:#0c4a6eef;
+    /* text-align: center; */
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 50px;
+    box-shadow: 4px 5px 6px rgba(0,0, 0,0.4) ;
+    filter: drop-shadow(0px 8px 13px rgba(0,0, 0,0.2));
+    box-shadow: -1px -3px 4px rgba(0,0, 0,0.4) ;
+    font-family:"Cursed-Timer";
+    color: #F94F6D;
+    font-size:4rem;
+
+}
+.Team-Display-flipped{
+     border-top-right-radius: 50px;
+     border-top-left-radius: 0px;
+}
+
+#action-btn{
+    font-family: "Jersey15";
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: rgba(0, 0, 0);
+    backdrop-filter: blur(0.5rem);
+    /* inset: 0; */
+    position: relative;
+    z-index: 0;  
+    box-shadow:
+     1px  -1px 2px black, 
+     1px  -1px 2px black;
+     transition: box-shadow 0.1s linear;
+    transition: duration 500ms;
+}
+
+#action-btn-child{
+    font-family: "Jersey15";
+    background: black;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+
+}
+
+#action-btn:active { 
+    transform: scale(0.5);
+}
+#Display-Board{
+    width: 70vw;
+    /* height: 100vh; */
+    background-color:#1b244aa4 ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.Man-of-match{
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.Screen{
+    width: 90%; 
+    padding: 2em 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    background-color: #080001;
+    color:#F94F6D ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 4em; */
+}
+
+.Screen-Display{
+    font-size: 6em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+#Control-Board{
+    width:80%;
+    /* height: 300px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    background-color:#064E3B;
+}
+.timer-display{
+    color:#F94F6D;
+}
+#timer-display-frame{
+    width: 40%;
+}
+
+.Score-display-frame{
+    width:20%;
+    padding: 24px;
+    color: #F94F6D;
+}
+#Team-Scores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.score-display{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 1rem;
+}
+
+.score-action-btn{
+    background-color: #064E3B; 
+    border: 1px solid #9AABD8 ;
+    color: #9AABD8;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    font-family:'Cursed-Timer' ;
+}
+
+.team-name {
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.timer-title{
+    color: white;
+    text-align: center;
+    padding-top: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+#Intervals-frame{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen  and (max-width:1590px) {
+.Screen-Display{
+    font-size: 4.7em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 2rem 2rem; 
+}
+
+.timer-display{
+    color:#F94F6D;
+}
+
+}
+@media screen and (max-width: 1150px){
+ 
+    .Team-Display{
+        font-size: 2.8rem;
+        width: 35vw;
+    }
+.Screen-Display{
+    font-size: 3.7em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 1rem 1rem; 
+}
+
+
+.team-name{
+    font-size: 4em;
+}
+
+.timer-display{
+    color:#F94F6D;
+}
+
+.Score-display-frame{
+    width:20px;
+    /* padding: 4px; */
+    color: #F94F6D;
+}
+}
+
+@media screen and (max-width: 900px){
+ 
+    .Team-Display{
+        font-size: 2.5rem;
+        width: 34vw;
+    }
+    #action-btn{
+        height: 8rem;
+        width: 8rem;
+        font-size: 2.5em;
+    }
+    #action-btn-child{
+        height: 8rem;
+        width: 8rem;
+    }
+    #Display-Board h1 {
+        font-size: 4rem;
+    }
+.Screen-Display{
+    font-size: 2.7em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 1em 1em; 
+
+}
+.timer-display{
+    color:#F94F6D;
+}
+
+}
+
+@media screen and (max-width: 700px){
+ 
+    .Team-Display{
+        font-size: 2rem;
+        width: 30vw;
+    }
+    #action-btn{
+        height: 7rem;
+        width: 7rem;
+        font-size: 2em;
+    }
+     #action-btn-child{
+        height: 7rem;
+        width: 7rem;
+    }
+    #Display-Board h1 {
+        font-size: 2.8rem;
+    }
+.Screen-Display{
+    font-size: 2em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 0.7em 0.7em; 
+}
+
+#timer-frame h1{
+    font-size: 2.5em;
+}
+
+
+#Team-Scores{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.timer-display{
+    color:#F94F6D;
+}
+}
+
+
+@media screen and (max-width: 500px){
+ 
+    .Team-Display{
+        font-size: 1.5rem;
+        width: 25vw;
+    }
+    #action-btn{
+        height: 6rem;
+        width: 6rem;
+        font-size: 1.5em;
+    }
+     #action-btn-child{
+        height: 6rem;
+        width: 6rem;
+    }
+    #Display-Board h1 {
+        font-size: 2.1rem;
+    }
+.Screen-Display{
+    font-size: 1.5em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 0.5em 0.5m; 
+}
+#timer-frame h1{
+    font-size: 2em;
+}
+
+ #action-btn-child{
+        font-size: 2rem;
+    }
+.timer-display{
+    color:#F94F6D;
+}
+
+}
+
+@media screen and (max-width: 400px){
+ 
+    .Team-Display{
+        font-size: 1em;
+        width: 25vw;
+    }
+    #action-btn{
+        height: 4rem;
+        width: 4rem;
+        font-size: 1em;
+    }
+     #action-btn-child{
+        height: 4rem;
+        width: 4rem;
+    }
+    #Display-Board h1 {
+        font-size: 1.7rem;
+    }
+
+.Screen-Display{
+    font-size: 1em;
+    color: #F59E0B;
+    font-family: 'Cursed-Timer' ;
+}
+.Screen{
+   padding: 10.5em 0.5m; 
+}
+#timer-frame h1{
+    font-size: 1em;
+}
+#action-btn-child{
+        font-size: 1rem;
+    }
+.timer-display{
+    color:#F94F6D;
+}
+}
